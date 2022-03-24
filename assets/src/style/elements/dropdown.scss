@@ -1,0 +1,139 @@
+.drop {
+  position: relative;
+  margin-bottom: 15px;
+
+  &__wrap {
+    &:hover {
+      .drop__box {
+        visibility: visible;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  &__btn {
+    min-height: 40px;
+    // min-width: 270px;
+    width: 100%;
+    background-color: $white;
+    padding: 10px 20px;
+    border-radius: 22px;
+    border: 1px solid #e5e5e5;
+    text-align: left;
+    color: $gray-3;
+
+    i {
+      padding-right: 10px;
+      font-weight: 900;
+    }
+  }
+
+  &__box {
+    position: absolute;
+    top: calc(100% + 15px);
+    // min-width: 270px;
+    width: 100%;
+    max-height: 330px;
+    visibility: hidden;
+    // visibility: visible;
+    border-radius: 22px;
+    background-color: $white;
+    border: 1px solid #e5e5e5;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    left: 0;
+
+    @media (min-width: $breakpoint-sm) {
+      right: auto;
+      left: 0;
+    }
+
+    li {
+      &:hover {
+        background-color: #ecf1f8;
+        border-radius: 22px;
+      }
+    }
+
+    a {
+      display: block;
+      padding: 10px 20px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      color: $gray-3;
+    }
+
+    span {
+      margin-left: 10px;
+    }
+  }
+}
+
+.output-drop {
+  position: relative;
+
+  &__wrap {
+    &:hover {
+      .output-drop__box {
+        visibility: visible;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    background-color: $gray-2;
+    padding: 8px 14px;
+    border-radius: 24px;
+    color: $gray-3;
+    min-width: 148px;
+
+    i {
+      font-weight: 900;
+    }
+  }
+
+  &__box {
+    position: absolute;
+    top: calc(100% + 10px);
+    width: 100%;
+    border-radius: 24px;
+    min-width: 148px;
+    visibility: hidden;
+    // visibility: visible;
+    background-color: $gray-2;
+    // max-height: 100px;
+    // overflow-y: auto;
+    transition: all 0.3s ease;
+    z-index: 1;
+
+    li {
+      display: block;
+      padding: 14px;
+      font-weight: 500;
+      color: $gray-3;
+
+      &:hover {
+        background-color: $white;
+        border-radius: 22px;
+      }
+    }
+  }
+}
+
+.sorting {
+  padding-right: 44px;
+}
+
+.output {
+  padding: 0 10px;
+}
+
+.all-select {
+  background-color: $gray-2;
+  padding: 7px 14px;
+  border-radius: 24px;
+  color: $gray-3;
+}

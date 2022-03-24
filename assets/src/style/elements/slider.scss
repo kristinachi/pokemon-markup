@@ -1,0 +1,78 @@
+.pokemon-slider {
+  overflow: hidden;
+
+  .slick-list {
+    margin: 0 -15px;
+  }
+
+  .slick-arrow {
+    position: absolute;
+    color: $secondary;
+    font-size: 0;
+    top: 0;
+
+    &:before {
+      font-family: "icomoon";
+      font-size: 24px;
+    }
+  }
+
+  .slick-prev {
+    left: 0;
+
+    &::before {
+      content: "\e909";
+    }
+  }
+  .slick-next {
+    right: 0;
+
+    &::before {
+      content: "\e908";
+    }
+  }
+}
+
+.slider-wrapp {
+  position: relative;
+}
+
+.pokemon-slider .slick-track {
+  display: flex;
+}
+
+.slide-pokemon {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $gray-2;
+  background-color: $white;
+  padding: 18px 12px;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+
+  &__img {
+    width: 142px;
+    height: 144px;
+    flex-shrink: 0;
+    margin-bottom: 6px;
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 20px;
+  }
+
+  &__price {
+    margin-bottom: 16px;
+
+    s {
+      font-size: 12px;
+    }
+  }
+
+  &__btn {
+    margin-top: auto;
+  }
+}

@@ -1,0 +1,152 @@
+.header-top {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: $breakpoint-sm) {
+    height: 96px;
+  }
+
+  &__img {
+    max-width: 100px;
+
+    @media (min-width: $breakpoint-sm) {
+      max-width: 266px;
+    }
+  }
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  // margin: 0 -10px;
+
+  // li {
+  //   padding: 0 10px;
+  // }
+
+  button {
+    color: $white;
+    font-size: 14px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    @media (min-width: $breakpoint-sm) {
+      font-size: 18px;
+    }
+  }
+
+  &__item {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: $secondary;
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    transition: 0.3s;
+
+    @media (min-width: $breakpoint-sm) {
+      height: 40px;
+      width: 40px;
+    }
+
+    &::before {
+      display: inline-block;
+      content: "0";
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+      background-color: $primary;
+      color: $white;
+      font-size: 10px;
+      text-align: center;
+      line-height: 14px;
+      position: absolute;
+      top: -10%;
+      right: -10%;
+
+      @media (min-width: $breakpoint-sm) {
+        height: 14px;
+        width: 14px;
+        top: -4%;
+        right: -4%;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.background {
+  height: 58px;
+  background-color: $secondary;
+}
+
+.catalog {
+  display: none;
+
+  @media (min-width: $breakpoint-md) {
+    display: inline-block;
+  }
+}
+
+.header-bottom {
+  &__catalog {
+    text-align: center;
+    background-color: $primary;
+    padding: 18px 0 17px 20px;
+
+    a {
+      color: $white;
+      font-size: 20px;
+      line-height: 23px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 2px;
+
+      i {
+        font-weight: 900;
+        padding-right: 20px;
+      }
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.search {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  padding: 0 15px;
+
+  &__input {
+    padding: 10px 14px;
+    border-radius: 100px;
+    background-color: $white;
+    width: 100%;
+  }
+
+  &__btn {
+    position: absolute;
+    right: 10%;
+    top: 25%;
+    font-size: 16px;
+    color: $secondary;
+
+    @media (min-width: $breakpoint-sm) {
+      right: 4%;
+    }
+  }
+}

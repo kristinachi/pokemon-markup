@@ -1,0 +1,179 @@
+.btn {
+  display: inline-block;
+  min-width: 118px;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 24px;
+  color: $white;
+  text-align: center;
+  font-size: 18px;
+  padding: 6px 16px;
+  transition: all 0.3s ease;
+  border: 2px solid;
+
+  &:hover {
+    transition: all 0.3s ease;
+  }
+
+  &.primary-btn {
+    background-color: $primary;
+    border-color: $primary;
+
+    &:hover {
+      background-color: transparent;
+      color: $primary;
+    }
+
+    &.outline-btn {
+      background-color: transparent;
+      color: $primary;
+
+      &:hover {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
+
+  &.secondary-btn {
+    background-color: $secondary;
+    border-color: $secondary;
+    font-size: 12px;
+    line-height: 14px;
+
+    &:hover {
+      background-color: transparent;
+      color: $secondary;
+    }
+
+    &.outline-btn {
+      background-color: transparent;
+      color: $secondary;
+
+      &:hover {
+        background-color: $secondary;
+        color: $white;
+      }
+    }
+  }
+
+  &.btn-sm {
+    padding: 2px 16px;
+  }
+
+  &.btn-more {
+    min-width: 162px;
+  }
+
+  &.btn-lg {
+    min-width: 270px;
+  }
+
+  &.btn-big {
+    min-height: 40px;
+  }
+}
+
+.btn-nav {
+  display: inline-block;
+  border-radius: 22px;
+  color: $gray-3;
+  text-align: center;
+  font-size: 14px;
+  padding: 6px 10px;
+  transition: all 0.3s ease;
+  border: 1px solid #c4c4c4;
+  background-color: #f1f1f1;
+
+  &:hover {
+    transition: all 0.3s ease;
+    background-color: $secondary;
+    color: $white;
+  }
+
+  &.rounded {
+    min-width: 64px;
+    padding: 5px 12px;
+  }
+
+  &.active {
+    background-color: $secondary;
+    color: $white;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: default;
+    color: $gray-3;
+
+    &:hover {
+      background-color: #f1f1f1;
+    }
+  }
+}
+
+.buy-btn {
+  max-width: 240px;
+  background-color: $primary;
+  padding: 7px 16px;
+  border-radius: 22px;
+  color: $white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+
+  i {
+    color: $white;
+  }
+
+  &__box {
+    padding: 0 30px;
+  }
+
+  &.btn-buy-outline {
+    background-color: transparent;
+    color: $primary;
+    border: 2px solid;
+
+    i {
+      color: $black;
+    }
+
+    .input-box {
+      background-color: $gray-2;
+      border: 1px solid $gray-5;
+      border-radius: 5px;
+    }
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+
+      i {
+        color: $white;
+      }
+
+      .input-box {
+        background-color: $white;
+        border: none;
+      }
+    }
+  }
+
+  &.buy-btn--sm {
+    @media (min-width: $breakpoint-lg) {
+      padding: 4px 16px;
+    }
+  }
+}
+
+.input-box {
+  width: 34px;
+  height: 28px;
+  border-radius: 6px;
+  margin-left: 6px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
